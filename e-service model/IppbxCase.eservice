@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Eservice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://m-chair.de/cme" createdBy="Ahmed S Yesuf">
+  <node xsi:type="Human" NodeId="_vNEGwNA8EeeylsIGz6RORA" name="Employee A">
+    <connection xsi:type="Partof" ConnectionId="_CTx6INBXEeeylsIGz6RORA" status="NotKnown" from="_vNEGwNA8EeeylsIGz6RORA" to="_wxKWwNA8EeeylsIGz6RORA"/>
+    <connection xsi:type="Use" ConnectionId="_OeiA8NBxEeeylsIGz6RORA" from="_vNEGwNA8EeeylsIGz6RORA" to="_TY9gINBcEeeylsIGz6RORA"/>
+    <actorAction NodeId="_czpqANA9EeeylsIGz6RORA" name="calling"/>
+    <actorAction NodeId="_dkeC8NA9EeeylsIGz6RORA" name="Connect remotly"/>
+    <actorAsset NodeId="_-Db98NBkEeeylsIGz6RORA" name="remote credentials" value="100.0">
+      <connection xsi:type="Use" ConnectionId="_A0zSUNBlEeeylsIGz6RORA" from="_dkeC8NA9EeeylsIGz6RORA" to="_-Db98NBkEeeylsIGz6RORA"/>
+      <connection xsi:type="Use" ConnectionId="_By55UNBlEeeylsIGz6RORA" from="_czpqANA9EeeylsIGz6RORA" to="_-Db98NBkEeeylsIGz6RORA"/>
+    </actorAsset>
+  </node>
+  <node xsi:type="Organisational" NodeId="_wxKWwNA8EeeylsIGz6RORA" name="Company">
+    <connection xsi:type="Agreement" ConnectionLabel="pbx contract agreement" ConnectionId="_0BC0UNBWEeeylsIGz6RORA" status="NotSecured" from="_wxKWwNA8EeeylsIGz6RORA" to="_x2r0YNA8EeeylsIGz6RORA" assetList="_rorzgNBcEeeylsIGz6RORA _OqPS4N_hEeebA4_p7wWhrA" fee="100.0"/>
+    <connection xsi:type="Payment" ConnectionLabel="service payment" ConnectionId="_2wyYENBWEeeylsIGz6RORA" from="_wxKWwNA8EeeylsIGz6RORA" to="_x2r0YNA8EeeylsIGz6RORA" paymentFee="100.0"/>
+    <actorAction NodeId="_O3B54OlyEeeIfK8hOtahIQ" name="make PBX contract"/>
+    <actorAsset NodeId="_rorzgNBcEeeylsIGz6RORA" name="call services" value="70.0"/>
+    <actorAsset NodeId="_OqPS4N_hEeebA4_p7wWhrA" name="Data Service" value="30.0"/>
+  </node>
+  <node xsi:type="Organisational" NodeId="_x2r0YNA8EeeylsIGz6RORA" name="TSP A" isMainActor="true">
+    <connection xsi:type="Agreement" ConnectionLabel="interconnection agreement" ConnectionId="_GHT2INBXEeeylsIGz6RORA" from="_x2r0YNA8EeeylsIGz6RORA" to="_1yRgMNA8EeeylsIGz6RORA" fee="30.0"/>
+    <connection xsi:type="Payment" ConnectionLabel="interconnection payment" ConnectionId="_IbjwsNBXEeeylsIGz6RORA" from="_x2r0YNA8EeeylsIGz6RORA" to="_1yRgMNA8EeeylsIGz6RORA" paymentFee="30.0"/>
+    <actorAction NodeId="_uZky4N9nEee9PvvJz-7YDA" name="Maintaining PBX"/>
+    <actorAction NodeId="_xlxdIN_rEeebA4_p7wWhrA" name="Configuring PBX"/>
+    <actorAction NodeId="_1yeG8OZVEeeENKGOriTWIQ" name="providing services">
+      <connection xsi:type="Use" ConnectionId="_oawLwOlyEeeIfK8hOtahIQ" from="_1yeG8OZVEeeENKGOriTWIQ" to="_Bt4eINBfEeeylsIGz6RORA"/>
+      <connection xsi:type="Use" ConnectionId="_o3NeQOlyEeeIfK8hOtahIQ" from="_1yeG8OZVEeeENKGOriTWIQ" to="_L4XoMN_hEeebA4_p7wWhrA"/>
+    </actorAction>
+    <actorAsset NodeId="_Bt4eINBfEeeylsIGz6RORA" name="call service" value="100.0">
+      <connection xsi:type="Use" ConnectionId="_OdmQwOlzEeeIfK8hOtahIQ" from="_Bt4eINBfEeeylsIGz6RORA" to="_FY5WEOlzEeeIfK8hOtahIQ"/>
+    </actorAsset>
+    <actorAsset NodeId="_L4XoMN_hEeebA4_p7wWhrA" name="Data Service" value="30.0"/>
+    <actorAsset NodeId="_FY5WEOlzEeeIfK8hOtahIQ" name="Interconnection service"/>
+  </node>
+  <node xsi:type="Human" NodeId="_zxTuANA8EeeylsIGz6RORA" name="IP PBX Admin">
+    <connection xsi:type="Partof" ConnectionId="_NkmuINBXEeeylsIGz6RORA" status="NotKnown" from="_zxTuANA8EeeylsIGz6RORA" to="_wxKWwNA8EeeylsIGz6RORA"/>
+    <connection xsi:type="Use" ConnectionId="_DA-_kNBxEeeylsIGz6RORA" from="_zxTuANA8EeeylsIGz6RORA" to="_TY9gINBcEeeylsIGz6RORA"/>
+    <actorAction NodeId="_hM3joNBWEeeylsIGz6RORA" name="maintaining">
+      <connection xsi:type="Use" ConnectionId="_SnWG4NBlEeeylsIGz6RORA" from="_hM3joNBWEeeylsIGz6RORA" to="_MN-gINBcEeeylsIGz6RORA"/>
+    </actorAction>
+    <actorAction NodeId="_i9ZGENBWEeeylsIGz6RORA" name="calling">
+      <connection xsi:type="Use" ConnectionId="_TTA6ENBlEeeylsIGz6RORA" from="_i9ZGENBWEeeylsIGz6RORA" to="_MN-gINBcEeeylsIGz6RORA"/>
+    </actorAction>
+    <actorAction NodeId="_nE5uANBWEeeylsIGz6RORA" name="call forwarding">
+      <connection xsi:type="Use" ConnectionId="_QdmMINBlEeeylsIGz6RORA" from="_nE5uANBWEeeylsIGz6RORA" to="_MN-gINBcEeeylsIGz6RORA"/>
+    </actorAction>
+    <actorAsset NodeId="_MN-gINBcEeeylsIGz6RORA" name="admin credentials" value="100.0" type="Credential"/>
+  </node>
+  <node xsi:type="Organisational" NodeId="_1yRgMNA8EeeylsIGz6RORA" name="TSP B">
+    <connection xsi:type="Communication" ConnectionLabel="receiving call" ConnectionId="_7YjbINBbEeeylsIGz6RORA" status="NotKnown" from="_1yRgMNA8EeeylsIGz6RORA" to="_ySNhsNBbEeeylsIGz6RORA"/>
+    <actorAsset NodeId="_nv_DoNBcEeeylsIGz6RORA" name="Interconnection service"/>
+  </node>
+  <node xsi:type="Human" NodeId="_ySNhsNBbEeeylsIGz6RORA" name="User">
+    <actorAction NodeId="_0C-7wNBbEeeylsIGz6RORA" name="receiving calls"/>
+  </node>
+  <node xsi:type="Infrastructure" NodeId="_TY9gINBcEeeylsIGz6RORA" name="IPPBX">
+    <infrastructureAction NodeId="_h2oGwNBgEeeylsIGz6RORA" name="forward calls"/>
+    <infrastructureAction NodeId="_nWGnMNBgEeeylsIGz6RORA" name="remote connection"/>
+  </node>
+  <node xsi:type="Human" NodeId="__lDT4Ov-EeesPddZDt_iIQ" name="Employee B">
+    <connection xsi:type="Partof" ConnectionId="_KeF6AOv_EeesPddZDt_iIQ" status="NotKnown" from="__lDT4Ov-EeesPddZDt_iIQ" to="_wxKWwNA8EeeylsIGz6RORA"/>
+    <actorAction NodeId="_Bp9K4Ov_EeesPddZDt_iIQ" name="Calling">
+      <connection xsi:type="Use" ConnectionId="_HFMEgOv_EeesPddZDt_iIQ" from="_Bp9K4Ov_EeesPddZDt_iIQ" to="_FDjj8Ov_EeesPddZDt_iIQ"/>
+    </actorAction>
+    <actorAction NodeId="_C3i_YOv_EeesPddZDt_iIQ" name="Connecting remotely">
+      <connection xsi:type="Use" ConnectionId="_HXRTAOv_EeesPddZDt_iIQ" from="_C3i_YOv_EeesPddZDt_iIQ" to="_FDjj8Ov_EeesPddZDt_iIQ"/>
+    </actorAction>
+    <actorAsset NodeId="_FDjj8Ov_EeesPddZDt_iIQ" name="Remote credential" value="100.0"/>
+  </node>
+</Eservice>
